@@ -5,6 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+*{
+  margin-top: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+  outline: none;
 }
 
 code {
@@ -12,8 +24,308 @@ code {
     monospace;
 }
 
+.box{
+  width: 1000px;
+  height: 500px;
+  background: whitesmoke;
+  position: relative;
+  overflow: hidden;
+  /* justify-content: center;
+  align-items: center; */
+  left: 200px;
+  top:100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
+
+}
+
+.signup{
+  position: absolute;
+  width: 100%;
+  height: 420px;
+  bottom: 0;
+  left: 0;
+  padding: 0 15px;
+  transition: 0.5s;
+}
+
+.login{
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  bottom: 0;
+  left: 101%;
+  padding: 0 10px;
+  transition: 0.5s;
+}
+
+.input-groupp{
+  margin-top: 10px;
+}
+
+.input-groupp span{
+  color: gray;
+}
+.input-groupp .inp{
+  width: 33%;
+  padding: 5px 5px;
+  border-radius: 100px;
+  border: 1px solid #c6c6c6;
+  margin-top: 5px;
+  display: block;
+}
+
+#inputPassword{
+  padding: 5px 5px;
+  width: 320px;
+  height: 35px;
+  /* padding: 5px 5px; */
+  border-radius: 200px;
+  border: 1px solid #c6c6c6;
+  margin-top: 5px;
+}
+
+#inputPassword2{
+  padding: 5px 5px;
+  width: 325px;
+  height: 35px;
+  /* padding: 5px 5px; */
+  border-radius: 200px;
+  border: 1px solid #c6c6c6;
+  margin-top: 5px;
+}
+
+ .submit-inp{
+  background: linear-gradient(30deg,red,blue);
+  border: none !important;
+  color: white;
+  font-weight: bolder;
+  font-variant: small-caps;
+  font-size: 18px;
+  bottom: 50px;
+  padding: 10px 15px;
+}
+
+.toggle-btn{
+  -webkit-appearance: none;
+  width: 150px;
+  height: 40px;
+  border: 1px solid gray;
+  position: absolute;
+  top: 30px;
+  left: calc(50% - 75px);
+  border-radius: 100px;
+}
+
+.toggle-btn::before{
+  content: 'SignUp';
+  /* content: 'Login'; */
+  font-weight: bolder;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(30deg,red,blue);
+  border-radius: 100px;
+  display: grid;
+  place-items: center;
+}
+
+.toggle-btn:checked::before{
+  content: 'Login';
+  left: 50%;
+  transition: 0.5s;
+}
+
+.toggle-btn:checked + .signup{
+  left: -101%;
+}
+
+.toggle-btn:checked + .signup + .login{
+  left: 0%;
+}
+
+input[type=date]:focus,input[type=email]:focus,input[type=text]:focus{
+  border: 2px solid lightblue;
+  box-shadow: 0 0 0 0.2rem rgba(40, 160, 69, 0.25);
+}
 
 
+.navbar1{
+  margin-top:-100px;
+  height: 80px;
+  width: 100%;
+  background-color: #1c55ac;
+  padding-top: 0px;
+  position: fixed;
+  z-index: 1030;
+}
+#phonenobtn11{
+text-decoration: none;
+height: 60px;
+width: 300px;
+margin-left: 100px;
+border-radius: 50px;
+margin-top:7px;
+border-style: none;
+background-color:#1c55ac;
+cursor: pointer;
+transition: .5s ease;
+border-color: #27b5f5;
+font-size: 26px;
+color: #27b5f5;
+
+}
+#phonenobtn11:hover{
+height: 62px;
+width: 302px;
+color: white;
+}
+#callicon1{
+  height: 40px;
+  width: 40px;
+margin-top:-5px;
+position: absolute;
+margin-left:-45px;
+}
+
+.backhome{
+  height: 250px;
+  width:100%;
+  /* background-color: #27b5f5; */
+  background-image: url(https://img.freepik.com/free-vector/people-protective-hazmat-suits-carrying-barrels-with-warning-sign-flu-outbreak-china-pathogen-respiratory-quarantine-coronavirus-concept-hospital-interior-horizontal_48369-23066.jpg?size=626&ext=jpg);
+  filter: blur(3px);
+  /* opacity: 0.3; */
+  position: absolute;
+  margin-top: -19px;
+}
+
+#aboutus{
+  position: relative;
+  margin-top: 100px;
+  margin-left: 50px;
+  opacity: 1;
+}
+
+#abouttext{
+color: black;
+position: absolute;
+margin-top: 70px;
+margin-left: 150px;
+opacity: 1;
+}
+
+#homelink{
+  color: black;
+  position: absolute;
+  margin-top: 50px;
+  text-decoration: none;
+  margin-left: 50px;
+  filter: none;
+  opacity: 1;
+}
+
+#homelink:hover{
+  color: #1c55ac;
+  font-weight: bolder;
+}
+
+#greaterthan{
+  margin-left: 5px;
+}
+
+/* .backhome-text Link.active{
+  background: none;
+} */
+.dropbtn {
+  /* background-color: #dcdcdc; */
+  border: none;
+  cursor: pointer;
+  margin-right:-20px;
+  height:60px;
+  width: 60px;
+  margin-top: 0px;
+ 
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
 
 
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  /* display: inline-block; */
+  float: right;
+  margin-right: 30px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #dcdcdc;
+  width: 1350px;
+  overflow: auto;
+  right: -30px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  z-index: 1;
+margin-top: -5px;
+ 
+}
+
+
+/* Links inside the dropdown */
+.dropdown-content Link {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 25px;
+  width: 100px;
+  margin-left: 10px;
+  
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content Link:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+#Side-Toggle-Bar{
+  background-color: #dcdcdc;
+  width: 100%;
+  height:11%;
+  position: absolute;
+  margin-top: 200px;
+  overflow: visible
+}
+
+.first{ 
+  display: flex; 
+  flex-direction: row; 
+  margin-top: 300px;
+}
+
+section div{
+  /* padding: 20px;  */
+  width: 110%;
+}
+        
+.second{
+  display: flex; 
+  margin-top: 30px;
+}
+
+#quality-assurance-image{
+  text-align: center;
+}
+
+.quality-assurance-text h1{
+  text-align: center;
+}
 

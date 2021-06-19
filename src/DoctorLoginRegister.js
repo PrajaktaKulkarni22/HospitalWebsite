@@ -1,18 +1,18 @@
 
-function DoctorLoginRegister(){
-    //     var x=document.getElementById("log-in");
-    //     var y=document.getElementById("register");    
-    // var z=document.getElementById("btn");
-    const Registerr = () => {
-        document.getElementById(logIn1).style.left = "-400px";
-        document.getElementById(register).style.left = "50px";
-        document.getElementById(btn).style.left = "110px";
-    };
-    const LogInn = () => {
-        document.getElementById(logIn1).style.left = "50px";
-        document.getElementById(register).style.left = "450px";
-        document.getElementById(btn).style.left = "0px";
-    };
+// function DoctorLoginRegister(){
+//     //     var x=document.getElementById("log-in");
+//     //     var y=document.getElementById("register");    
+//     // var z=document.getElementById("btn");
+//     const Registerr = () => {
+//         document.getElementById(logIn1).style.left = "-400px";
+//         document.getElementById(register).style.left = "50px";
+//         document.getElementById(btn).style.left = "110px";
+//     };
+//     const LogInn = () => {
+//         document.getElementById(logIn1).style.left = "50px";
+//         document.getElementById(register).style.left = "450px";
+//         document.getElementById(btn).style.left = "0px";
+//     };
 
 // const formBox={
     
@@ -114,33 +114,93 @@ function DoctorLoginRegister(){
 //     borderRadius: '30px',
 //     marginTop: '50px',
 //   };
- return (
-        <div style={{height:"100%", width:"100%",position:"absolute"}}>
-            <div style={formBox}>
-                <div style={buttonBox}>
-                    <div id={btn}></div>
-                    <button type="button" style={toggleBtn} onClick={LogInn}>Log In</button>
-                    <button type="button" style={toggleBtn} onclick={Registerr}>Register</button>
+//  return (
+//         <div style={{height:"100%", width:"100%",position:"absolute"}}>
+//             <div style={formBox}>
+//                 <div style={buttonBox}>
+//                     <div id={btn}></div>
+//                     <button type="button" style={toggleBtn} onClick={LogInn}>Log In</button>
+//                     <button type="button" style={toggleBtn} onclick={Registerr}>Register</button>
+//                 </div>
+//                 <form style={inputGroup} id={logIn1}>
+//                     <input type="text" style={inputField} placeholder="Email-id" required />
+//                     <input type="text" style={inputField} placeholder="Password" required />
+//                     <input type="checkbox" style={checkBox} /><span>Remember Me</span>
+//                     <button type="submit" style={submitBtn}>Login</button>
+//                     <button type="submit" style={backBtn}>Back</button>
+
+//                 </form>
+//                 <form style={inputGroup} id={register}>
+//                     <input type="text" style={inputField} placeholder="Name" required />
+//                     <input type="text" style={inputField} placeholder="Email-id" required />
+//                     <input type="text" style={inputField} placeholder="Password" required />
+//                     {/* <input type="checkbox" class="check-box"><span>i</span> */}
+//                     <button type="submit" style={submitBtn}>Register</button>
+//                     <button type="submit" style={backBtn}>Back</button>
+//                 </form>
+//             </div>
+
+//         </div>
+//     );
+// };
+// export default DoctorLoginRegister;
+
+function DoctorLoginRegister(){
+  return(
+    <div className="box">
+      <input type="checkbox" name="" className="toggle-btn"/>
+            <div className="signup">
+                {/* <form> */}
+                <div className="input-groupp">
+                    
+                    <input type="text" placeholder="Username" name="" className="inp"/>
                 </div>
-                <form style={inputGroup} id={logIn1}>
-                    <input type="text" style={inputField} placeholder="Email-id" required />
-                    <input type="text" style={inputField} placeholder="Password" required />
-                    <input type="checkbox" style={checkBox} /><span>Remember Me</span>
-                    <button type="submit" style={submitBtn}>Login</button>
-                    <button type="submit" style={backBtn}>Back</button>
-
-                </form>
-                <form style={inputGroup} id={register}>
-                    <input type="text" style={inputField} placeholder="Name" required />
-                    <input type="text" style={inputField} placeholder="Email-id" required />
-                    <input type="text" style={inputField} placeholder="Password" required />
-                    {/* <input type="checkbox" class="check-box"><span>i</span> */}
-                    <button type="submit" style={submitBtn}>Register</button>
-                    <button type="submit" style={backBtn}>Back</button>
-                </form>
+                <div className="input-groupp">
+                    
+                    <input type="email" placeholder="Email" name="" className="inp"/>
+                </div>
+                <div className="input-groupp">
+                    
+                    <input type="password" placeholder="Password" name="" className="form-control" id="inputPassword"/>
+                </div>
+                <div className="input-groupp">
+                   
+                    <input type="date" name="" className="inp" />
+                </div>
+                <div className="input-groupp">
+                   
+                    <input type="number" placeholder="Age" name="" className="inp" />
+                </div>
+                <div className="input-groupp" style={{marginTop:'25px'}}>
+                    <input type="submit" value="SignUp" className=" submit-inp"/>
+                </div>
+                {/* </form> */}
+                
             </div>
+            <div className="login">
+                {/* <form> */}
+                <div className="input-groupp">
+                    <span>
+                        Email
+                    </span>
+                    <input type="email" placeholder="Email" name="" className="inp"/>
+                </div>
+                <div className="input-groupp">
+                    <span>
+                        Password
+                    </span>
+                    <input type="password" placeholder="Password" name="" className="form-control" id="inputPassword2"/>
+                </div>
+               
+                <div className="input-groupp" >
+                    <input type="submit" value="Login" className="inp submit-inp"/>
+                </div>
+                {/* </form> */}
+               
+            </div>
+            
+    </div>
+  )
+}
 
-        </div>
-    );
-};
-export default DoctorLoginRegister;
+export default DoctorLoginRegister

@@ -5,6 +5,8 @@ import React from 'react';
 // import AboutUs from './AboutUs'
 // import ContactUs from './ContactUs'
 import { Link } from 'react-router-dom'
+import Mailto from 'react-protected-mailto'
+
 
 class TrialHp extends React.Component {
  
@@ -88,7 +90,7 @@ toggle between hiding and showing the dropdown content */
           />
         </div>
 
-        <div class="Side-Toggle-Bar" id="Side-Toggle-Bar">
+        <div class="Side-Toggle-Bar" id="Side-Toggle-Bar" style={{marginTop:'320px'}}>
 
           <div class="dropdown">
 
@@ -98,7 +100,7 @@ toggle between hiding and showing the dropdown content */
     <a href="#">SPECIALITY</a>
     <a href="#">PATHOLOGY</a> */}
               <Link to="/ContactUs" class="active" id="contactus">CONTACT US</Link>
-              <Link to="#" id="aboutus">ABOUT US</Link>
+              <Link to="/AboutUs" id="aboutuss">ABOUT US</Link>
               <Link to="#" id="speciality">SPECIALITY</Link>
               <Link to="#" id="pathology" >PATHOLOGY</Link>
               <Link to="#" id="consultation">CONSULTATION</Link>
@@ -131,7 +133,7 @@ toggle between hiding and showing the dropdown content */
 
 <div id="cardss">
   
-        <div class="card" width= "100px">
+        <div class="card" width= "50px">
   <div class="card-body">
   <Link style={{textDecoration:"none", color:"black"}} to="/TeleConsultation" class="card-link"> <i class="fas fa-laptop-medical fa-5x" id="tele-icon"></i><h5 id="tele-link" style={{display:"block", marginTop:"-10px", marginLeft:"10px"}}>TELE-CONSULTATION</h5></Link>
   </div>
@@ -267,10 +269,246 @@ toggle between hiding and showing the dropdown content */
 
 <div class="Login/Register">
   
-  <Link to="DoctorLoginRegister"><input type="checkbox" id="cb1" /><label for="cb1" id="lcb1">Doctor Login/Registration</label></Link>
-  <Link to="PatientLoginRegister"><input type="checkbox" id="cb2" /><label for="cb1" id="lcb2">Patient Login/Registration</label></Link>
+  <Link to="/DoctorLoginRegister"><input type="checkbox" id="cb1" /><label for="cb1" id="lcb1">Doctor Login/Registration</label></Link>
+  <Link to="/PatientLoginRegister"><input type="checkbox" id="cb2" /><label for="cb1" id="lcb2">Patient Login/Registration</label></Link>
     
   </div>
+
+  <h2 style={{fontSize:"40px",fontFamily:"sans-serif",display:"block",marginTop:"40px"}}><i class="fas fa-comments fa-2x"></i>PATIENT TESTIMONIALS</h2>
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
+
+  </div>
+
+  <div style={{marginTop:"-360px",width:'1320px'}} class="carousel-inner">
+    <div class="carousel-item active">
+      <h1 style={{height:"400px"}}><img style={{height:"100px", width:"100px", marginLeft:"20px"}} src="https://png.pngtree.com/svg/20151203/double_quote_left__531807.png"/>
+      <img style={{height:"100px", width:"100px", marginLeft:"1210px", transform:"rotate(180deg)"}} src="https://png.pngtree.com/svg/20151203/double_quote_left__531807.png"/></h1>
+      {/* <img src="https://www.jupiterhospital.com/images/hospital.jpg" class="d-block w-100" alt="..."/> */}
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style={{marginTop:"-180px", fontSize:"35px"}}>The Hospital is great with good quality service and hygienic hospitality</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+
+
+    <div class="carousel-item">
+      <h1 style={{height:"400px"}}><img style={{height:"100px", width:"100px", marginLeft:"20px"}} src="https://png.pngtree.com/svg/20151203/double_quote_left__531807.png"/>
+      <img style={{height:"100px", width:"100px", marginLeft:"1210px", transform:"rotate(180deg)"}} src="https://png.pngtree.com/svg/20151203/double_quote_left__531807.png"/></h1>
+      {/* <img src="https://www.jupiterhospital.com/images/hospital.jpg" class="d-block w-100" alt="..."/> */}
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style={{marginTop:"-180px", fontSize:"35px"}}>The Hospital is great with good quality service and hygienic hospitality</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <h1 style={{height:"400px"}}><img style={{height:"100px", width:"100px", marginLeft:"20px"}} src="https://png.pngtree.com/svg/20151203/double_quote_left__531807.png"/>
+      <img style={{height:"100px", width:"100px", marginLeft:"1210px", transform:"rotate(180deg)"}} src="https://png.pngtree.com/svg/20151203/double_quote_left__531807.png"/></h1>
+      {/* <img src="https://www.jupiterhospital.com/images/hospital.jpg" class="d-block w-100" alt="..."/> */}
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style={{marginTop:"-180px", fontSize:"35px"}}>The Hospital is great with good quality service and hygienic hospitality</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <h1 style={{height:"400px"}}><img style={{height:"100px", width:"100px", marginLeft:"20px"}} src="https://png.pngtree.com/svg/20151203/double_quote_left__531807.png"/>
+      <img style={{height:"100px", width:"100px", marginLeft:"1210px", transform:"rotate(180deg)"}} src="https://png.pngtree.com/svg/20151203/double_quote_left__531807.png"/></h1>
+      {/* <img src="https://www.jupiterhospital.com/images/hospital.jpg" class="d-block w-100" alt="..."/> */}
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style={{marginTop:"-180px", fontSize:"35px"}}>The Hospital is great with good quality service and hygienic hospitality</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <h1 style={{height:"400px"}}><img style={{height:"100px", width:"100px", marginLeft:"20px"}} src="https://png.pngtree.com/svg/20151203/double_quote_left__531807.png"/>
+      <img style={{height:"100px", width:"100px", marginLeft:"1210px", transform:"rotate(180deg)"}} src="https://png.pngtree.com/svg/20151203/double_quote_left__531807.png"/></h1>
+      {/* <img src="https://www.jupiterhospital.com/images/hospital.jpg" class="d-block w-100" alt="..."/> */}
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style={{marginTop:"-180px", fontSize:"35px"}}>The Hospital is great with good quality service and hygienic hospitality</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <h1 style={{height:"400px"}}><img style={{height:"100px", width:"100px", marginLeft:"20px"}} src="https://png.pngtree.com/svg/20151203/double_quote_left__531807.png"/>
+      <img style={{height:"100px", width:"100px", marginLeft:"1210px", transform:"rotate(180deg)"}} src="https://png.pngtree.com/svg/20151203/double_quote_left__531807.png"/></h1>
+      {/* <img src="https://www.jupiterhospital.com/images/hospital.jpg" class="d-block w-100" alt="..."/> */}
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style={{marginTop:"-180px", fontSize:"35px"}}>The Hospital is great with good quality service and hygienic hospitality</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <h1 style={{height:"400px"}}><img style={{height:"100px", width:"100px", marginLeft:"20px"}} src="https://png.pngtree.com/svg/20151203/double_quote_left__531807.png"/>
+      <img style={{height:"100px", width:"100px", marginLeft:"1210px", transform:"rotate(180deg)"}} src="https://png.pngtree.com/svg/20151203/double_quote_left__531807.png"/></h1>
+      {/* <img src="https://www.jupiterhospital.com/images/hospital.jpg" class="d-block w-100" alt="..."/> */}
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style={{marginTop:"-180px", fontSize:"35px"}}>The Hospital is great with good quality service and hygienic hospitality</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <h1 style={{height:"400px"}}><img style={{height:"100px", width:"100px", marginLeft:"20px"}} src="https://png.pngtree.com/svg/20151203/double_quote_left__531807.png"/>
+      <img style={{height:"100px", width:"100px", marginLeft:"1210px", transform:"rotate(180deg)"}} src="https://png.pngtree.com/svg/20151203/double_quote_left__531807.png"/></h1>
+      {/* <img src="https://www.jupiterhospital.com/images/hospital.jpg" class="d-block w-100" alt="..."/> */}
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style={{marginTop:"-180px", fontSize:"35px"}}>The Hospital is great with good quality service and hygienic hospitality</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    {/* <div class="carousel-item">
+      <h1 style={{height:"400px"}}></h1>
+      <img src="https://mk0ehealtheletsj3t14.kinstacdn.com/wp-content/uploads/2009/07/best-hospital-in-south-india.jpg" class="d-block w-100" alt="..."/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <h1 style={{height:"400px"}}></h1>
+      <img src="https://www.jupiterhospital.com/images/rehab/4.jpg" class="d-block w-100" alt="..."/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div> */}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+<footer class="footer-section">
+        <div class="containerfooter">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>kothrud pune 411038</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>1800-100-200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span><Mailto style={{textDecoration:"none"}} email="pradnya.d10@gmail.com" subject="Hello" body="Hello world!"></Mailto></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"><i class="fas fa-h-square fa-6x"></i></a>
+                                {/* <img src="https://image.freepik.com/free-vector/hospital-logo-template_1061-6.jpg" class="img-fluid" alt="logo"/> */}
+                            </div>
+                            <div class="footer-text">
+                                {/* <p>Terms and Conditions!</p> */}
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="#"><i id="whatsappicon" class="fab fa-whatsapp facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i id="instagramicon" class="fab fa-instagram google-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Quick Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Speciaity</a></li>
+                                <li><a href="#">Pathlogy</a></li>
+                                <li><a href="#">Book Appointment</a></li>
+                                <li><a href="#">Consultation</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address"/>
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="containercopyright">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2021, All Right Reserved <a href="">Hospital!</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="#" style={{paddingRight:'20px'}}>Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
     );
   }
