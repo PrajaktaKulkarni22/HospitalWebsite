@@ -1,6 +1,15 @@
 import { Link } from 'react-router-dom'
+import Mailto from 'react-protected-mailto'
+
 
 function TrialDoctorLoginRegister(){
+	const openNav=()=> {
+		document.getElementById("myNav").style.height = "100%";
+	  }
+	  
+	  const closeNav=()=> {
+		document.getElementById("myNav").style.height = "0%";
+	  }
     return(
 		<div>
 
@@ -21,6 +30,8 @@ function TrialDoctorLoginRegister(){
           </button> */}
         </div>
 
+		
+
 		<div class="backhome"></div>
         <div className="backhome-text">
             <h3 id="aboutus">Doctor Registration</h3>
@@ -30,6 +41,11 @@ function TrialDoctorLoginRegister(){
         {/* <div className="register-text">
 			<h1>Registation Form</h1>
 		</div> */}
+
+<div class="centered">Already have an account?<br/> To Login<b><a href="#login-section" class="pulse-button">
+           &darr;
+    </a></b>
+	</div>
 		<div class="form-wrapper" style={{marginTop:'220px'}}> 
 			<form class="fcorn-register container" style={{backgroundColor:'#1c55ac'}} >
 				<p class="register-info">Note: All fields are required.</p>
@@ -132,11 +148,174 @@ function TrialDoctorLoginRegister(){
 						<input type="checkbox" id="register-agree" class="toggle-input" />
 						<span class="toggle-handle"></span>
 					</label>
-					<span class="info" style={{color:'#dcdcdc',fontWeight:'bolder'}}>Do you agree to the <a href="#" style={{color:'#dcdcdc',fontWeight:'bolder'}}>terms and conditions?</a></span>
+					<span class="info" style={{color:'#dcdcdc',fontWeight:'bolder',fontSize:'18px'}}>Do you agree to the <a href="#" style={{color:'#dcdcdc',fontWeight:'bolder'}}>terms and conditions?</a></span>
 				</p>
+
+				
 				<p class="register-submit"><input type="submit" value="Register Now" style={{marginTop:'50px',color:'#1c55ac'}}/></p>
+				<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onClick={closeNav}>&times;</a>
+  <div class="overlay-content">
+    {/* <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a> */}
+
+<div class="login-container-doctor">
+       
+       <form action="" id="log-in-doctor">
+           <h1>LOGIN</h1>
+           <div id="udiv">
+               <label id="uid">Username</label>
+               <input type="text" id="dtext" name="emailid" placeholder="Enter your email-id here"  />
+           </div>
+           <div id="pdiv" style={{marginTop:'-40px'}}>
+               <label id="pid">Password</label>
+               <input type="password" id="ptext" name="password" placeholder="Enter your password here"  />
+           </div>
+           <input type="submit" id="dsubmit" name="login" value="LOGIN" />
+          
+           <a id="fpwd" href="#">Forgot Password?</a>
+            {/* <a href="modifiedhomepagespiceup.html"><button type="button" id="backbtn" width="100px"  style={{float: 'left', marginTop: '-10px'}}>BACK</button></a> */}
+       </form>
+
+       {/* <form action="" id="register">
+        <h1>LOGIN</h1>
+        <div>
+            <label>Email-Id</label>
+            <input type="text" name="emailid" placeholder="Enter your email-id here" value="" />
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter your password here" value="" />
+        </div>
+        <input type="submit" name="login" value="LOGIN" />
+       
+     
+         <a href="modifiedhomepagespiceup.html"><button type="button" id="backbtn" width="100px" >BACK</button></a>
+    </form> */}
+   </div>
+	
+  </div>
+</div>
+
+		<section id="login-section">
+				<h3 style={{marginLeft:'340px',color:'#4cbeed'}}>Already have an account?<button onClick={openNav}><u>Login!</u></button></h3>
+				</section>
+
 			</form>
 		</div>
+
+		<footer class="footer-section">
+        <div class="containerfooter">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>kothrud pune 411038</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>1800-100-200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span><Mailto style={{textDecoration:"none"}} email="pradnya.d10@gmail.com" subject="Hello" body="Hello world!"></Mailto></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"><i class="fas fa-h-square fa-6x"></i></a>
+                                {/* <img src="https://image.freepik.com/free-vector/hospital-logo-template_1061-6.jpg" class="img-fluid" alt="logo"/> */}
+                            </div>
+                            <div class="footer-text">
+                                {/* <p>Terms and Conditions!</p> */}
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="#"><i id="whatsappicon" class="fab fa-whatsapp facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i id="instagramicon" class="fab fa-instagram google-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Quick Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Speciaity</a></li>
+                                <li><a href="#">Pathlogy</a></li>
+                                <li><a href="#">Book Appointment</a></li>
+                                <li><a href="#">Consultation</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address"/>
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="containercopyright">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2021, All Right Reserved <a href="">Hospital!</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="#" style={{paddingRight:'20px'}}>Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
         
         </div>
         

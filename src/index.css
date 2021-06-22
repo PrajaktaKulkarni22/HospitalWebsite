@@ -308,9 +308,23 @@ margin-top: -5px;
 .first{ 
   display: flex; 
   flex-direction: row; 
-  margin-top: 300px;
+  margin-top: 100px;
 }
 
+.technology{
+  display: flex;
+  flex-direction: row;
+}
+
+.second-technology{
+  display: flex;
+}
+.chairman-message{
+  display: flex; 
+  flex-direction: row; 
+  /* margin-top: 200px; */
+
+}
 section div{
   /* padding: 20px;  */
   width: 110%;
@@ -329,3 +343,10 @@ section div{
   text-align: center;
 }
 
+.technology-text h1{
+  text-align: center;
+}
+
+.mission-text h1{
+  text-align: center;
+}
