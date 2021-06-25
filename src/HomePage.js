@@ -1,5 +1,5 @@
 import React from 'react';
-import TeleConsultation from './TeleConsultation'
+import TeleConsultation from './PostAQuery'
 import Pathology from './Pathology'
 import Speciality from './Speciality'
 import AboutUs from './AboutUs'

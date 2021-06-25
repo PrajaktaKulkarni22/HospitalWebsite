@@ -331,7 +331,7 @@ background-color: aqua;
   height: 200px;
        width:250px;
      box-shadow:  5px -5px 10px 0px #EAE479;
-     background-color: #27b5f5;
+     background-color: #dcdcdc;
     
  }
  #tele-icon{
@@ -439,7 +439,7 @@ margin-top:40px;
   }
   
   .container {
-      margin-top: 700px;
+      margin-top: 30px;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
@@ -503,6 +503,20 @@ margin-top:40px;
     min-height: 100vh;
     background: #57bd84;
   }*/
+
+  #Login-Register-Image{
+    height: 300px;
+    filter: blur(3px);
+    opacity:0.9;
+    background-image: 
+url(https://img.freepik.com/free-vector/people-protective-hazmat-suits-carrying-barrels-with-warning-sign-flu-outbreak-china-pathogen-respiratory-quarantine-coronavirus-concept-hospital-interior-horizontal_48369-23066.jpg?size=626&ext=jpg);
+  }
+
+  .Login-Register{
+    margin-top: -290px;
+    height: 250px;
+      }
+
   #cb1,#cb2 { 
     height: 0;
     width: 10px;

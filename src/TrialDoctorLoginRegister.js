@@ -3,6 +3,10 @@ import Mailto from 'react-protected-mailto'
 
 
 function TrialDoctorLoginRegister(){
+    const myFunction = () => {
+        document.getElementById("myDropdown").classList.toggle("show");
+    
+      }
 	const openNav=()=> {
 		document.getElementById("myNav").style.height = "100%";
 	  }
@@ -10,6 +14,17 @@ function TrialDoctorLoginRegister(){
 	  const closeNav=()=> {
 		document.getElementById("myNav").style.height = "0%";
 	  }
+
+      if(true) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
     return(
 		<div>
 
@@ -38,6 +53,22 @@ function TrialDoctorLoginRegister(){
             <Link to="/" id="homelink"><h3>Home  <span id="greaterthan"> {'>'} </span></h3> </Link>
             <h3 id="abouttext">Doctor Registration</h3>
         </div>
+
+        <div class="Side-Toggle-Bar" id="Side-Toggle-Bar" style={{marginTop:'200px'}}>
+
+          <div class="dropdown">
+
+            <input type="image" src="https://img.icons8.com/fluent/2x/menu.png" onClick={myFunction} id="dropbtn" class="dropbtn" />
+            <div id="myDropdown" class="dropdown-content">
+              
+              <Link to="/ContactUs" class="active" id="contactus">CONTACT US</Link>
+              <Link to="/AboutUs" id="aboutuss">ABOUT US</Link>
+              <Link to="#" id="speciality">SPECIALITY</Link>
+              <Link to="#" id="pathology" >PATHOLOGY</Link>
+              <Link to="#" id="consultation">CONSULTATION</Link>
+            </div>
+          </div>
+        </div>
         {/* <div className="register-text">
 			<h1>Registation Form</h1>
 		</div> */}
@@ -46,7 +77,7 @@ function TrialDoctorLoginRegister(){
            &darr;
     </a></b>
 	</div>
-		<div class="form-wrapper" style={{marginTop:'220px'}}> 
+		<div class="form-wrapper" style={{marginTop:'300px'}}> 
 			<form class="fcorn-register container" style={{backgroundColor:'#1c55ac'}} >
 				<p class="register-info">Note: All fields are required.</p>
 				<div class="row">

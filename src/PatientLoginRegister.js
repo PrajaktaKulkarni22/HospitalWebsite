@@ -3,6 +3,11 @@ import Mailto from 'react-protected-mailto'
 
 
 function PatientLoginRegister(){
+
+    const myFunction = () => {
+        document.getElementById("myDropdown").classList.toggle("show");
+    
+      }
 	const openNav=()=> {
 		document.getElementById("myNav").style.height = "100%";
 	  }
@@ -10,6 +15,17 @@ function PatientLoginRegister(){
 	  const closeNav=()=> {
 		document.getElementById("myNav").style.height = "0%";
 	  }
+
+      if(true) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
     return(
 		<div>
 
@@ -42,11 +58,27 @@ function PatientLoginRegister(){
 			<h1>Registation Form</h1>
 		</div> */}
 
+<div class="Side-Toggle-Bar" id="Side-Toggle-Bar" style={{marginTop:'200px'}}>
+
+<div class="dropdown">
+
+  <input type="image" src="https://img.icons8.com/fluent/2x/menu.png" onClick={myFunction} id="dropbtn" class="dropbtn" />
+  <div id="myDropdown" class="dropdown-content">
+    
+    <Link to="/ContactUs" class="active" id="contactus">CONTACT US</Link>
+    <Link to="/AboutUs" id="aboutuss">ABOUT US</Link>
+    <Link to="#" id="speciality">SPECIALITY</Link>
+    <Link to="#" id="pathology" >PATHOLOGY</Link>
+    <Link to="#" id="consultation">CONSULTATION</Link>
+  </div>
+</div>
+</div>
+
 <div class="centered">Already have an account?<br/> To Login<b><a href="#login-section" class="pulse-button">
            &darr;
     </a></b>
 	</div>
-		<div class="form-wrapper" style={{marginTop:'220px'}}> 
+		<div class="form-wrapper" style={{marginTop:'300px'}}> 
 			<form class="fcorn-register container" style={{backgroundColor:'#1c55ac'}} >
 				<p class="register-info">Note: All fields are required.</p>
 				<div class="row">
@@ -87,68 +119,49 @@ function PatientLoginRegister(){
 					</p>
           <p class="col-md-6 specialty-wrap">
 						<select>
-							<option value="0" selected disabled>Specialty</option>
-							<option value="1">Family Medicine</option>
-							<option value="2">Mental Health</option>
-							<option value="3">Dermatology And Cosmetology</option>
-							<option value="4">Neurology</option>
-							<option value="5">Gynecology</option>
-							<option value="6">Nutrition And Dietetics</option>
-							<option value="7">Laboratory Medicine</option>
-							<option value="8">Ear Nose Throat Head And Neck Surgery</option>
+							<option value="0" selected disabled>Addictions</option>
+							<option value="1">Smoking</option>
+							<option value="2">Alcohol</option>
+							<option value="3">Drugs</option>
+							<option value="4">Prescription drugs addiction</option>
+							<option value="5">Mobile/Internet Addiction</option>
+							<option value="6">Tobacco</option>
+							 <option value="7">None</option>
+							{/*<option value="8">Ear Nose Throat Head And Neck Surgery</option>
 							<option value="9">General Surgery</option>
 							<option value="10">Anaesthesia</option>
-							<option value="11">Cardiology - Interventional</option>
+							<option value="11">Cardiology - Interventional</option> */}
 						</select>
             </p>
             <p class="col-md-6 language-wrap"> 
-						<select>
-							<option value="0" selected disabled>Language</option>
-							<option value="1">English</option>
-						</select>
-               <span class="extern-type" style={{color:'#dcdcdc',fontWeight:'bolder'}}>Proficient languages.</span>
-					</p>
-          <p class="col-md-6"><input type="text" placeholder="Medical College" required /><span class="extern-type" />
+           <p className="col-md-6"> <input type="text" placeholder="Age" required /><span class="extern-type" /></p>
+          
+               {/* <span class="extern-type" style={{color:'#dcdcdc',fontWeight:'bolder'}}>Proficient languages.</span> */}
+			</p>
+          <p class="col-md-6"><input type="text" placeholder="Address" required /><span class="extern-type" />
 
           </p>
           
-          <p class="col-md-6"><input type="text" placeholder="Medical ID" required /></p>
+          <p class="col-md-3"><input type="text" placeholder="Height" required /><span class="extern-type" /></p>
+
+          <p class="col-md-3"><input type="text" placeholder="Weight" required /><span class="extern-type" /></p>
+
+
+          <textarea placeholder="Medical History">Medical History</textarea>
+
           
           {/* <p class="col-md-4"><input type="text" placeholder="PayPal username" required /></p> */}
           
           
-          <p class="col-md-6"><form>
-            <p style={{color:'#dcdcdc',fontWeight:'bolder'}}>Upload your medical ID:</p>
-              <input type="file" name="fileToUpload" id="fileToUpload" style={{color:'#dcdcdc',fontWeight:'bolder'}} />
-              <input type="submit" value="Upload Image" name="submit" required style={{float:'left',marginTop:'10px',backgroundColor:'#dcdcdc',color:'#1c55ac'}} />
-              </form>
-           </p>
-
           
-          
-          <p class="col-md-6"><form >
-           <p style={{color:'#dcdcdc',fontWeight:'bolder'}}> Upload your personal photo:</p>
-              <input type="file" name="fileToUpload" id="fileToUpload" style={{color:'#dcdcdc',fontWeight:'bolder'}} />
-              <input type="submit" value="Upload Image" name="submit" required style={{float:'left',marginTop:'10px',backgroundColor:'#dcdcdc',color:'#1c55ac'}}/> 
-              {/* <span class="extern-type">Professional clothing required.</span> */}
-              </form>
-           </p>
-          
-          <p class="col-xs-6"><input type="text" placeholder="Enter your Facebook profile link" required /></p>
-          
-          <p class="col-xs-6"><input type="text" placeholder="Enter your Linkedin profile link" required /></p>
-          
-          <p class="col-xs-6"><input type="text" placeholder="Enter your Twitter username" required /></p>
-          
-          <p class="col-xs-6"><input type="text" placeholder="Enter your Instagram username" required /></p>
           
         </div>
-        	<p class="register-toggle">
-					<label for="register-agree" class="toggle-label" data-on="YES" data-off="NO">
+        	<p class="register-toggle" >
+					<label for="register-agree" class="toggle-label" data-on="YES" data-off="NO" style={{marginTop:'27px'}}>
 						<input type="checkbox" id="register-agree" class="toggle-input" />
-						<span class="toggle-handle"></span>
-					</label>
-					<span class="info" style={{color:'#dcdcdc',fontWeight:'bolder',fontSize:'18px'}}>Do you agree to the <a href="#" style={{color:'#dcdcdc',fontWeight:'bolder'}}>terms and conditions?</a></span>
+						<span class="toggle-handle" ></span>
+					</label><br/>
+					<span class="info" style={{color:'#dcdcdc',fontWeight:'bolder',fontSize:'18px'}}>Do you agree to the <a href="#" style={{color:'#dcdcdc',fontWeight:'bolder',marginTop:'30px'}}>terms and conditions?</a></span>
 				</p>
 
 				

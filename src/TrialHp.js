@@ -96,9 +96,7 @@ toggle between hiding and showing the dropdown content */
 
             <input type="image" src="https://img.icons8.com/fluent/2x/menu.png" onClick={this.myFunction} id="dropbtn" class="dropbtn" />
             <div id="myDropdown" class="dropdown-content">
-              {/* <a href="#">CONTACT US</a>
-    <a href="#">SPECIALITY</a>
-    <a href="#">PATHOLOGY</a> */}
+              
               <Link to="/ContactUs" class="active" id="contactus">CONTACT US</Link>
               <Link to="/AboutUs" id="aboutuss">ABOUT US</Link>
               <Link to="#" id="speciality">SPECIALITY</Link>
@@ -182,6 +180,8 @@ toggle between hiding and showing the dropdown content */
 </div>
       </div>
 
+      <h2 style={{fontSize:"40px",fontFamily:"sans-serif",display:"block",textShadow:"-2px -2px #1c55ac",marginTop:'700px'}}><i class="fas fa-calendar-check fa-2x"></i>APPOINTMENT BOOKING</h2>
+
       <div class="container">
   <form>
   <div class="row">
@@ -239,9 +239,6 @@ toggle between hiding and showing the dropdown content */
       </select>
     </div>
   </div>
-
-
-
   <div class="row">
     <div class="col-25">
       <label for="appointment">Appointment Date</label>
@@ -250,9 +247,6 @@ toggle between hiding and showing the dropdown content */
       <input type="date" id="appointment" name="email-id" required/>
     </div>
   </div>
-
-
-
   <div class="row">
     <div class="col-25">
       <label for="subject">Symptoms</label>
@@ -267,7 +261,10 @@ toggle between hiding and showing the dropdown content */
   </form>
 </div>
 
-<div class="Login/Register">
+<h2 style={{fontSize:"40px",fontFamily:"sans-serif",display:"block",textShadow:"-2px -2px #1c55ac"}}><i class="fas fa-sign-in-alt fa-2x"></i>LOGIN/REGISTER</h2>
+<div id="Login-Register-Image"></div>
+
+<div class="Login-Register">
   
   <Link to="/DoctorLoginRegister"><input type="checkbox" id="cb1" /><label for="cb1" id="lcb1">Doctor Login/Registration</label></Link>
   <Link to="/PatientLoginRegister"><input type="checkbox" id="cb2" /><label for="cb1" id="lcb2">Patient Login/Registration</label></Link>

@@ -10,17 +10,18 @@ import HomePage from './HomePage';
 import {BrowserRouter} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import {BrowserRouter as Router,Switch} from 'react-router-dom';
-import TeleConsultation from './TeleConsultation';
 import Pathology from './Pathology';
 import Speciality from './Speciality';
 import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
 import TrialHp from './TrialHp';
+import RoomCategories from './RoomCategories'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import DoctorLoginRegister from './DoctorLoginRegister';
 import PatientLoginRegister from './PatientLoginRegister'
 import TrialDoctorLoginRegister from './TrialDoctorLoginRegister';
 import './TrialDoctor.css'
+import './PostAQuery.css'
+import PostAQuery from './PostAQuery';
 
 ReactDOM.render(
   <div>
@@ -35,9 +36,10 @@ ReactDOM.render(
 				  <Route exact path="/AboutUs" component={AboutUs}/>
           <Route exact path="/Speciality" component={Speciality}/>
           <Route exact path="/Pathology" component={Pathology}/>
-          <Route exact path="/TeleConsultation" component={TeleConsultation}/>
+          <Route exact path="/PostAQuery" component={PostAQuery}/>
           <Route exact path="/DoctorLoginRegister" component={TrialDoctorLoginRegister}/>
           <Route exact path="/PatientLoginRegister" component={PatientLoginRegister}/>
+          <Route exact path="/RoomCategories" component={RoomCategories}/>
 	      </Switch>
       </Router>
    
