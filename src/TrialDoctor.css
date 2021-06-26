@@ -1541,7 +1541,7 @@ output {
 
   .login-container-doctor{
     width: 370px;
-    height: 420px;
+    height: 530px;
     margin-top: 10%;
     left: 50%;
     position: absolute;
@@ -1574,11 +1574,11 @@ output {
     color: black;
 } */
 
-.login-container-doctor #udiv,#pdiv{
+.login-container-doctor #udiv,#pdiv,#qdiv,#ndiv{
     margin-bottom: 20px;
 }
 
-.login-container-doctor #dtext, #ptext{
+.login-container-doctor #dtext, #ptext,#qtext,#ntext{
     width: 100%;
     border: none;
     outline: none;
